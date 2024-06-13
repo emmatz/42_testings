@@ -1,7 +1,6 @@
-
 #include <unistd.h>
 
-void ft_putchar(char c, int l)
+void    ft_putchar(char c)
 {
-    write(1, &c, l);
+    write(1, &c, 1);
 }

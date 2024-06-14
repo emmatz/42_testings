@@ -2,10 +2,8 @@
 
 int f(int *np)
 {
-    int tmp;
     
-    tmp = 43;
-    *np = tmp;
+    *np = 50;
 
     return *np;
 
@@ -22,7 +20,7 @@ int main()
     *ip = 0;    // x is now 0
     ip = &z[0]; // ip now points to z[0]
 
-    printf("X: %d, Y: %d, Z: %d\n", x, y, z);
+    printf("X: %d, Y: %d, Z: %d\n", x, y, *z);
 
     y = f(&x);
     printf("NY: %d\n", y);

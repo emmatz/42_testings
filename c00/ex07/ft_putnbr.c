@@ -2,29 +2,30 @@
 #include <unistd.h>
 
 void ft_putnbr(int nb);
-int digits(int a);
-
-int digits(int a)
-{
-    int i;
-    int tmp;
-    i = 0; 
-    
-    do {
-        tmp = a / 10;
-        a = tmp;
-        i++;
-
-    } while (tmp != 0);
-    return i;
-}
 
 void ft_putnbr(int nb)
 {
-    int length;
-    char x[2];
-    length = digits(nb);
-    x[0] = '0' + length;
-    write(1, x, 1);
+	long	tmp;
+	char	n[10];
+	int		i;
 
+	i = 0;
+	tmp = nb;
+	if (nb == 0)
+	{
+		write(1, "0", 1);
+		return ;
+	}
+	if (tmp < 0)
+	{
+		tmp *= -1;
+		write(1, "-", 1);
+	}
+	while(tmp % 10)
+	{
+		n[i++] = (tmp % 10) + 48;
+		tmp /= 10;
+	}
+	while( i >= 0)
+		write(1, &n[--i], 1);
 }

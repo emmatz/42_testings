@@ -6,7 +6,7 @@ void    ft_print_comb(void);
 void    ft_print_comb(void)
 {
 	char    buf[5];
-    buf[0] = '0';
+	buf[0] = '0';
 	buf[3] = ',';
 	buf[4] = ' ';
 	while (buf[0] <= '7')

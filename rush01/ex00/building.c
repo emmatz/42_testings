@@ -9,6 +9,7 @@ void  fail(void);
 //void  show_array(int s);
 void initial_array(int s,int matrix[s][s]);
 void  show_array(int s,int matrix[s][s]);
+void get_initial_values(char *str, int i);
 
 int	main(int argc, char **argsv)
 {
@@ -35,6 +36,8 @@ int	main(int argc, char **argsv)
   write(1, "\n", 1);
   matrix[4][1] = 2;
   show_array(a, matrix);
+
+  get_initial_values(argsv[1], length);
 
 	return 0;
 }
@@ -170,19 +173,27 @@ void  show_array(int s, int matrix[s][s])
   }
 }
 
-int get_initial_values(char *str)
+void get_initial_values(char *str, int i)
 {
   int length = 0;
-  int size = 0;
+  int v[i];
 
   while(str[length] != '\0')
   {
     if(str[length] >= '0' && str[length] <= '9')
     {
-
+      v[i] = atoi((str[length]));
+      //v[i] = atoi(str[length]);
+      v[i]++;
     }
     length++; 
   }
-  return size;
+
+  for (int a = 0; a < i; a++)
+  {
+    printf("%d ", v[a]);
+  }
+  write(1, "\n", 1);
+  //return size;
 }
 

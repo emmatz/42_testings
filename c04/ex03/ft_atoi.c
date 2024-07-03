@@ -25,8 +25,29 @@ int	ft_atoi(char *str)
 }
 
 #include <stdio.h>
+#include <stdlib.h>
 int	main()
 {
+  char *test[] = {"   ---+--+-12345ab567",
+    "--+--+-12345ab567",
+    "+--++12x345ab567",
+    "  ---+--+--532345ab567",
+    "a45",
+    "+-t12345ab567",
+    "  +++---6842d1586+-34",
+    "+----+--+-+12340957 34 479",
+    "+----+--+-+12+340957 34 479",
+    "+----+--+-+12-340957 34 479",
+    "+123+343-4321"};
+  int size = sizeof(test)/sizeof(test[0]);
+
+  for (int i=0; i < size; i++)
+  {
+    printf("%s\n", test[i]);
+    printf("   ATOI: %d\n", atoi(test[i]));
+    printf("My ATOI: %d\n\n", ft_atoi(test[i]));
+  }
+  /*
 	printf("   ---+--+-12345ab567 [+]: %d\n", ft_atoi("   ---+--+-12345ab567"));
 	printf("--+--+-12345ab567     [-]: %d\n", ft_atoi("--+--+-12345ab567"));
 	printf("+--++12x345ab567      [+]: %d\n", ft_atoi("+--++12x345ab567"));
@@ -34,4 +55,5 @@ int	main()
 	printf("a45                   [+]: %d\n", ft_atoi("a45"));
 	printf("+-t12345ab567         [-]: %d\n", ft_atoi("+-t12345ab567"));
 	printf("  +++---6842d1586+-34 [-]: %d\n", ft_atoi("  +++---6842d1586+-34"));
+  */
 }

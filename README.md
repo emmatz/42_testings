@@ -1,6 +1,6 @@
 # testings
 
-![c](https://github.com/emmatz/testings_42/cc.webp)
+![c](https://raw.githubusercontent.com/emmatz/testings_42/refs/heads/main/cc.webp)
 
 ## General
 

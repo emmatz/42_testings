@@ -1,5 +1,7 @@
 # testings
 
+![c](https://github.com/emmatz/testings_42/cc.webp)
+
 ## General
 
 - **42 Piscine**
